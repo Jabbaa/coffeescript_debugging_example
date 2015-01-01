@@ -127,7 +127,7 @@ if [ "$NPM" == "" ]
                 # Compile coffee files in source folder
                 #
 
-                coffee --compile --output $COFFEE_OUT $COFFEE_IN
+                coffee $1 --compile --output $COFFEE_OUT $COFFEE_IN
 
             fi
 
@@ -149,7 +149,7 @@ if [ "$NPM" == "" ]
 
                       FILE=`basename "$f"`
                       CSSFILE=`echo "$FILE" | sed -e "s/less/css/g"`
-                      lessc "$LESS_IN/$FILE" > "$LESS_OUT/$CSSFILE"
+                      lessc $2 "$LESS_IN/$FILE" > "$LESS_OUT/$CSSFILE"
                   fi
                 done
             fi

@@ -137,7 +137,7 @@ if [ "$NPM" == "" ]
                         DIFF=$((`date +%s`-`stat -L -f %m $COFFEE_IN/$FILE`))
                         if [ $DIFF -lt 3 ]
                           then
-                            coffee --compile --output $COFFEE_OUT $COFFEE_IN
+                            coffee $1 --compile --output $COFFEE_OUT $COFFEE_IN
                             break
                         fi
                     fi
@@ -165,7 +165,7 @@ if [ "$NPM" == "" ]
                         if [ $DIFF -lt 3 ]
                           then
                             CSSFILE=`echo "$FILE" | sed -e "s/less/css/g"`
-                            lessc "$LESS_IN/$FILE" > "$LESS_OUT/$CSSFILE"
+                            lessc $2 "$LESS_IN/$FILE" > "$LESS_OUT/$CSSFILE"
                         fi
                     fi
                   done
