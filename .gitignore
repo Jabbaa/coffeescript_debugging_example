@@ -1,0 +1,12 @@
+.DS_Store
+.idea
+desktop.ini
+Thumbs.db
+.htaccess
+.htpasswd
+/bower_components
+/node_modules
+npm-debug.log
+assets/scripts/lib
+assets/styles/lib
+
