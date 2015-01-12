@@ -107,7 +107,7 @@ if [ "$NPM" == "" ]
         then
           echo "No LESS library folder found"
           echo "Created folder: $LESS_IN"
-          mkdir -p $LESS_OUT
+          mkdir -p $LESS_IN
         fi
 
         #
